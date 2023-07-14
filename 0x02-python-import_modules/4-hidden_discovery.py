@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-from variable_load_5 import a
+import hidden_4
 
 if __name__ == "__main__":
-    print(a)
+    for function in dir(hidden_4):
+        if (function[0] != "_"):
+            print(function)
