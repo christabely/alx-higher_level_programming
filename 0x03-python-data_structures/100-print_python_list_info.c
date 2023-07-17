@@ -1,9 +1,8 @@
-nclude <stdio.h>
+#include <stdio.h>
 #include <Python.h>
 /**
- * print_python_list_info - prints python list
- *
- * @p: ponter  PyObject
+ * print_python_list_info - prints info of python list
+ * @p: PyObject head
  * Return: no return
  */
 void print_python_list_info(PyObject *p)
