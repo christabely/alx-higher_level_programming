@@ -1,16 +1,16 @@
 #include "lists.h"
 /**
-* reverse - reverses a linked list
- * @hd: pointer
+ * reverse - reverses a linked list
+ * @hhd: pointer
  * Return: pointer to 1st node
  */
 
-void reverse(listint_t **hd)
+void reverse(listint_t **hhd)
 {
 	listint_t *prev, *curr, *nxt;
 
 	prev = NULL;
-	curr = *hd;
+	curr = *hhd;
 
 	while (curr != NULL)
 	{
@@ -20,22 +20,22 @@ void reverse(listint_t **hd)
 		curr = nxt;
 	}
 
-	*hd = prev;
+	*hhd = prev;
 }
 
 /**
  * check - checks and compares each int of list
- * @h1: head of the 1st half
- * @h2: head of the 2nd half
+ * @hd1: head of the 1st half
+ * @hd2: head of the 2nd half
  * Return: 1 if equals,otherwise 0
  */
-int check(listint_t *h1, listint_t *h2)
+int check(listint_t *hd1, listint_t *hd2)
 {
 	listint_t *temp1;
 	listint_t *temp2;
 
-	temp1 = h1;
-	temp2 = h2;
+	temp1 = hd1;
+	temp2 = hd2;
 
 	while (temp1 != NULL && temp2 != NULL)
 	{
@@ -59,9 +59,9 @@ int check(listint_t *h1, listint_t *h2)
 }
 
 /**
- * is_palindrome - checks for a palindrome
+ * is_palindrome - checks for palindrome
  * @head: pointer to head of list
- * Return: 0 if not a palindrome else 1
+ * Return: 0 if not a palindrome, else 1
  */
 int is_palindrome(listint_t **head)
 {
@@ -91,16 +91,16 @@ int is_palindrome(listint_t **head)
 		secHalf = slow;
 		prev_slow->next = NULL;
 		reverse(&secHalf);
-		isp = compare(*head, secHalf);
+		isPal = check(*head, secHalf);
 
 		if (middle != NULL)
 		{
 			prev_slow->next = middle;
-			middle->next = scn_half;
+			middle->next = secHalf;
 		}
 		else
 		{
-			prev_slow->next = scn_half;
+			prev_slow->next = secHalf;
 		}
 	}
 	return (isPal);
