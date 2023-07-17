@@ -24,12 +24,12 @@ void reverse(listint_t **hhd)
 }
 
 /**
- * check - checks and compares each int of list
+ * compare - compares each int of list
  * @hd1: head of the 1st half
  * @hd2: head of the 2nd half
  * Return: 1 if equals,otherwise 0
  */
-int check(listint_t *hd1, listint_t *hd2)
+int compare(listint_t *hd1, listint_t *hd2)
 {
 	listint_t *temp1;
 	listint_t *temp2;
@@ -91,7 +91,7 @@ int is_palindrome(listint_t **head)
 		secHalf = slow;
 		prev_slow->next = NULL;
 		reverse(&secHalf);
-		isPal = check(*head, secHalf);
+		isPal = compare(*head, secHalf);
 
 		if (middle != NULL)
 		{
