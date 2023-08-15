@@ -1,0 +1,1 @@
+for_proect_0x0A-python-inheritance
