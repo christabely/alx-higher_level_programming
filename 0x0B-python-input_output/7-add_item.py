@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This function takes all file adds them
+This function adds all files of
 parameters to the list inside this file.
 """
 
