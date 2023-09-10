@@ -3,11 +3,11 @@
 #include <Python.h>
 
 /**
- * print_python_string - function tha prints string info
- * @p: Python pointer object
- * Return: void
+ * print_python_string - Prints string information
+ *
+ * @p: Python Object
+ * Return: no return
  */
-
 void print_python_string(PyObject *p)
 {
 
